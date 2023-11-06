@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for activating the disk space check service every 5 minutes :)
+
+[Timer]
+OnCalendar=*-*-* *:00/5:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=NGINX Server 1
+After=network.target
+
+[Service]
+MemoryMax=50M
+Type=forking
+PIDFile=/run/nginx_server1.pid
+ExecStartPre=/usr/sbin/nginx -t -c /var/www/nginx_server1/config/nginx.conf
+ExecStart=/usr/sbin/nginx -c /var/www/nginx_server1/config/nginx.conf
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/usr/sbin/nginx -s quit
+
+[Install]
+WantedBy=multi-user.target

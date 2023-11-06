@@ -1,0 +1,9 @@
+[Unit]
+Description=Service to check free disk space and send Telegram notifications (echo)
+
+[Service]
+Type=simple
+ExecStart=/hw-4/second/disk_space_check.sh
+
+[Install]
+WantedBy=default.target
