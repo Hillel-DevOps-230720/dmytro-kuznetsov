@@ -1,0 +1,9 @@
+[Unit]
+Description=Service to monitor log file for a keyword
+
+[Service]
+Type=simple
+ExecStart=/hw-4/first/monitor_script.sh
+
+[Install]
+WantedBy=default.target

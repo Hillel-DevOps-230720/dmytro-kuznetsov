@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for activating the service every 30 seconds :)
+
+[Timer]
+OnUnitActiveSec=30s
+Unit=monitoring_service.service
+
+[Install]
+WantedBy=timers.target
